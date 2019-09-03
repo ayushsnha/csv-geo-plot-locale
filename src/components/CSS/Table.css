@@ -1,0 +1,26 @@
+ .fixedHeader {
+	display: table;
+	width: 100%
+}
+
+.container{
+    text-align: center;
+}
+
+th{
+    width: 90px !important
+}
+
+
+table{
+    text-align: center;
+}
+tbody{
+    width: 100%;
+    display: table;
+	overflow: auto;
+}
+
+.table-responsive {
+    max-height:300px;   
+}

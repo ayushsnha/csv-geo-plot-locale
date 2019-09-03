@@ -1,0 +1,23 @@
+.c1{
+    width: 60% !important;
+    margin-top:2rem;
+    margin-bottom: 2rem;
+    text-align: center ;
+    background-position: right 50px center;
+    background-image: url('../Images/csv-file-format-extension-pngrepo-com.png');
+    background-repeat: no-repeat;
+    background-size: 170px
+}
+
+.box{
+    font-family: cursive;
+    padding: 2rem;
+    margin: 2rem;
+    text-align: left;
+    
+    
+}
+
+.success{
+    color:green;
+}
