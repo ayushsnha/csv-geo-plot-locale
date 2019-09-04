@@ -3,19 +3,20 @@
     margin-top:2rem;
     margin-bottom: 2rem;
     text-align: center ;
-    background-position: right 50px center;
+    background-position: right 2rem center;
+    overflow: hidden;
     background-image: url('../Images/csv-file-format-extension-pngrepo-com.png');
     background-repeat: no-repeat;
-    background-size: 170px
+    background-size: 9rem;
+    min-width: 500px;
 }
+
 
 .box{
     font-family: cursive;
     padding: 2rem;
     margin: 2rem;
     text-align: left;
-    
-    
 }
 
 .success{

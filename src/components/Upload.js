@@ -32,10 +32,11 @@ class Upload extends React.Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <React.Fragment>
         <div className='container c1 shadow p-3 mb-5 bg-white rounded rounded-pill'>
-          <h2>Upload CSV File!</h2>
+          <h4>Upload CSV File!</h4>
           <div className='box'>
             <input
               type='file'
@@ -47,10 +48,14 @@ class Upload extends React.Component {
               onChange={this.handleChange}
             />
             <p />
-            <button className='btn btn-success' onClick={this.importCSV}>
+            <button
+              className='btn btn-success'
+              disabled={!this.state.csvfile}
+              onClick={this.importCSV}
+            >
               Upload now!
             </button>
-            {this.state.data ? (
+            {this.state.data && this.state.csvfile ? (
               <p className='success'>File Upload Success</p>
             ) : (
               <p />
