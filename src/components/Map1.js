@@ -7,16 +7,17 @@ export default function Map(props) {
     accessToken: process.env.REACT_APP_TOKEN
   });
 
-  console.log(props.data);
-  const markers = props.data.map(startLoc => (
-    <Feature
-      key={startLoc.id}
-      coordinates={[
-        parseFloat(startLoc.from_long),
-        parseFloat(startLoc.from_lat)
-      ]}
-    />
-  ));
+  const markers = props.data
+    .slice(0, 25000)
+    .map(startLoc => (
+      <Feature
+        key={startLoc.id}
+        coordinates={[
+          parseFloat(startLoc.from_long),
+          parseFloat(startLoc.from_lat)
+        ]}
+      />
+    ));
   const mapStyle = {
     style: 'mapbox://styles/ayushsnha/ck02aakn62yt41dmrjporr40q'
   };
@@ -39,7 +40,7 @@ export default function Map(props) {
             'circle-color': 'blue',
             'circle-stroke-width': 1,
             'circle-stroke-color': '#fff',
-            'circle-stroke-opacity': 1
+            'circle-stroke-opacity': 0.7
           }}
         >
           {markers}
