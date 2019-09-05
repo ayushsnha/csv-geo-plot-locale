@@ -8,7 +8,7 @@ export default function Map(props) {
   });
 
   const markers = props.data
-    .slice(0, 1500)
+    .slice(0, 15000)
     .map(startLoc => (
       <Feature
         key={startLoc.id}
