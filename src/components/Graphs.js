@@ -44,7 +44,7 @@ export default function Graphs(props) {
     .slice(1, 4);
   return (
     <div className='container c2 shadow p-3 mb-5 bg-white'>
-      <h3 className='font-weight-light'>Graph according to travel type</h3>
+      <h3 className='font-weight-light'>Pie Chart according to travel type</h3>
       <PieChart
         width={800}
         height={400}

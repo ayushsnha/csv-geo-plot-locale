@@ -4,6 +4,7 @@ import './CSS/Upload.css';
 import Table from './Table';
 import Map1 from './Map1';
 import Graphs from './Graphs';
+import Graph1 from './Graph1';
 class Upload extends React.Component {
   constructor() {
     super();
@@ -68,6 +69,7 @@ class Upload extends React.Component {
             <Table data={this.state.data.slice(0, 20)} />
             <Map1 data={this.state.data} />
             <Graphs data={this.state.data} />
+            <Graph1 data={this.state.data} />
           </React.Fragment>
         ) : (
           <p />

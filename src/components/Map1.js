@@ -8,7 +8,7 @@ export default function Map(props) {
   });
 
   const markers = props.data
-    .slice(0, 15000)
+    .slice(0, 1500)
     .map(startLoc => (
       <Feature
         key={startLoc.id}
@@ -25,7 +25,7 @@ export default function Map(props) {
   return (
     <div>
       <h2 className='text-center font-weight-light'>
-        Map highlighting starting points of taxis
+        Map Highlighting Starting Points of Taxis
       </h2>
       <div className='container shadow p-2 mb-5 bg-white'>
         <Map
