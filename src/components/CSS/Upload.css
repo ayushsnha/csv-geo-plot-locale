@@ -11,6 +11,12 @@
     min-width: 500px;
 }
 
+.c2{
+    margin: auto;
+    width:65% !important;
+    min-width: 500px !important;
+    overflow: auto;
+}
 
 .box{
     font-family: cursive;

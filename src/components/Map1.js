@@ -8,7 +8,7 @@ export default function Map(props) {
   });
 
   const markers = props.data
-    .slice(0, 25000)
+    .slice(0, 15000)
     .map(startLoc => (
       <Feature
         key={startLoc.id}
@@ -23,29 +23,34 @@ export default function Map(props) {
   };
 
   return (
-    <div className='container'>
-      <Map
-        center={[77.5946, 12.9716]}
-        zoom={[11]}
-        style={mapStyle.style}
-        containerStyle={{
-          width: '82vw',
-          height: '75vh'
-        }}
-      >
-        <Layer
-          type='circle'
-          id='marker'
-          paint={{
-            'circle-color': 'blue',
-            'circle-stroke-width': 1,
-            'circle-stroke-color': '#fff',
-            'circle-stroke-opacity': 0.7
+    <div>
+      <h2 className='text-center font-weight-light'>
+        Map highlighting starting points of taxis
+      </h2>
+      <div className='container shadow p-2 mb-5 bg-white'>
+        <Map
+          center={[77.5946, 12.9716]}
+          zoom={[11]}
+          style={mapStyle.style}
+          containerStyle={{
+            width: '82vw',
+            height: '85vh'
           }}
         >
-          {markers}
-        </Layer>
-      </Map>
+          <Layer
+            type='circle'
+            id='marker'
+            paint={{
+              'circle-color': 'blue',
+              'circle-stroke-width': 1,
+              'circle-stroke-color': '#fff',
+              'circle-stroke-opacity': 0.7
+            }}
+          >
+            {markers}
+          </Layer>
+        </Map>
+      </div>
     </div>
   );
 }

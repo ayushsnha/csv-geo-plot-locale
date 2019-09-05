@@ -16,7 +16,8 @@ export default function Table(props) {
     );
   };
   return (
-    <div className='container'>
+    <div className='container shadow p-3 mb-5 bg-white'>
+      <p>Sample Latitudes and Longitudes from the CSV</p>
       <table className='table table-bordered table-responsive'>
         <thead className='fixedHeader'>
           <tr>
@@ -26,9 +27,8 @@ export default function Table(props) {
             <th>To Long</th>
           </tr>
         </thead>
-        <tbody>{props.data.slice(0, 20).map(renderTds)}</tbody>
+        <tbody>{props.data.map(renderTds)}</tbody>
       </table>
-      <p>Sample Latitudes and Longitudes from the CSV</p>
     </div>
   );
 }

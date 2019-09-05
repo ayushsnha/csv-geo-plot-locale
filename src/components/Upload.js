@@ -3,6 +3,7 @@ import Papa from 'papaparse';
 import './CSS/Upload.css';
 import Table from './Table';
 import Map1 from './Map1';
+import Graphs from './Graphs';
 class Upload extends React.Component {
   constructor() {
     super();
@@ -64,7 +65,9 @@ class Upload extends React.Component {
         </div>
         {this.state.data ? (
           <React.Fragment>
-            <Table data={this.state.data} /> <Map1 data={this.state.data} />
+            <Table data={this.state.data.slice(0, 20)} />
+            <Map1 data={this.state.data} />
+            <Graphs data={this.state.data} />
           </React.Fragment>
         ) : (
           <p />
