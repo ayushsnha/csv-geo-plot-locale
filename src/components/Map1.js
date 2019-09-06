@@ -7,17 +7,15 @@ export default function Map(props) {
     accessToken: process.env.REACT_APP_TOKEN
   });
 
-  const markers = props.data
-    .slice(0, 15000)
-    .map(startLoc => (
-      <Feature
-        key={startLoc.id}
-        coordinates={[
-          parseFloat(startLoc.from_long),
-          parseFloat(startLoc.from_lat)
-        ]}
-      />
-    ));
+  const markers = props.data.map(startLoc => (
+    <Feature
+      key={startLoc.id}
+      coordinates={[
+        parseFloat(startLoc.from_long),
+        parseFloat(startLoc.from_lat)
+      ]}
+    />
+  ));
   const mapStyle = {
     style: 'mapbox://styles/ayushsnha/ck02aakn62yt41dmrjporr40q'
   };
